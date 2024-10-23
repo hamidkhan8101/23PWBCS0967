@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ADMISSION FORM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Style for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('uni 2.jpg'); /* Update the path */
+            background-size:cover; /* Ensures the image covers the entire background */
+            background-position:center; /* Centers the background image */
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+            padding: 20px;
+            max-width: 400px;
+            margin: 50px auto; /* Centers the form on the page */
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for the main title */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Style for the form */
+        form {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Style for labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Style for input fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for radio buttons and checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Style for the submit button */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Change button color on hover */
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>ADMISSION FORM</h1>
+        <form action="/submit" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="engineering">Engineering</option>
+                <option value="medical">Medical</option>
+                <option value="computer science">Computer Science</option>
+                <option value="arts">Arts</option>
+            </select>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume">
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <label for="subscribe">Subscribe for Newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="Yes">
+
+            <button type="submit" name="submit" id="SubmitButton">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
